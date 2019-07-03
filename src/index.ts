@@ -1,10 +1,10 @@
 export default async function <T>(times: number,
-                                  body: () => Promise<T> | T,
-                                  errorHandler?: (error: any, count: number) => any): Promise<T> {
+                                  body: (attempt?: number) => Promise<T> | T,
+                                  errorHandler?: (error: any, attempt?: number) => any): Promise<T> {
   let count = 1;
   while (count < times) {
     try {
-      return await body();
+      return await body(count);
     } catch (error) {
       if (errorHandler) {
         errorHandler(error, count);
@@ -12,5 +12,5 @@ export default async function <T>(times: number,
     }
     count++;
   }
-  return await body();
+  return await body(count);
 }
