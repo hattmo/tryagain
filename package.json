@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "author": "Hattmo",
+  "license": "GPL-3.0-or-later",
+  "name": "@hattmo/tryagain",
+  "description": "Retrys code that can throw an exception N number of times.",
+  "scripts": {
+    "test": "cross-per-env",
+    "test:staging": "mocha -r ts-node/register ./test/**/*Test.ts",
+    "test:development": "mocha -r ts-node/register --bail ./test/**/*Test.ts",
+    "build": "tsc --project .",
+    "prepublish": "npm run build"
+  },
+  "main": "./dist/index.js",
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.0.12",
+    "chai": "^4.2.0",
+    "cross-per-env": "^1.0.5",
+    "mocha": "^6.1.4",
+    "ts-node": "^8.3.0",
+    "tslint": "^5.18.0",
+    "typescript": "^3.5.2"
+  }
+}
