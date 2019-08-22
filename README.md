@@ -4,6 +4,12 @@
 
 Retrys code that can throw an exception N number of times.
 
+## Installation
+
+```bash
+npm i @hattmo/tryagain
+```
+
 ## How to
 
 ```javascript
