@@ -13,9 +13,9 @@
   },
   "main": "./dist/index.js",
   "devDependencies": {
-    "@types/chai": "^4.2.20",
+    "@types/chai": "^4.2.21",
     "@types/mocha": "^8.2.3",
-    "@types/node": "^16.0.1",
+    "@types/node": "^16.0.3",
     "@types/sinon": "^10.0.2",
     "chai": "^4.3.4",
     "cross-per-env": "^1.0.5",
